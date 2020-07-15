@@ -61,3 +61,5 @@ async function main() {
 }
 
 main();
+
+const prueba = "esto es una constante de prueba"
