@@ -63,7 +63,12 @@ async function main() {
 main();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const valor=1 
 =======
 const prueba = "esto es una constante de prueba"
 >>>>>>> 6421dd1d206c4d9401dda0c07e135d76c2035eb1
+=======
+const prueba = "esto es una constante de prueba"
+const blabla = "puto el que lee"
+>>>>>>> 609b84a736a76da4a5819473803141294e618140
