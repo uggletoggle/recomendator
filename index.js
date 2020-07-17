@@ -65,3 +65,4 @@ main();
 const prueba = "esto es una constante de prueba"
 const blabla = "puto el que lee"
 
+const otraconstante = 45;
