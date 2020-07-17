@@ -62,9 +62,3 @@ async function main() {
 
 main();
 
-const prueba = "esto es una constante de prueba"
-const blabla = "puto el que lee"
-
-<<<<<<< HEAD
-const a= 2+2
-const b="boya ssos un garca"
