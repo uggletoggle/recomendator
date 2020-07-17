@@ -48,17 +48,38 @@ function traerListaElementos($, claseCSS) {
     return oCheerio.get();
 }
 
-async function main() {
+let service = async function() {
     const peliculas = [];
     const generos = ["AV", "INT", "AC", "DR"];
+    let count = 0;
 
-    generos.forEach(async(genero) => {
-        const peliculasPorGenero = await traerPeliculas((genero = genero));
-        peliculas.push.apply(peliculas, peliculasPorGenero);
+    return new Promise(resolve => {
+         console.log("entrando");
+       
+            
+console.log("antes del foreach");
+            generos.forEach(async(genero) => {
+                const peliculasPorGenero = await traerPeliculas((genero = genero));
+                peliculas.push.apply(peliculas, peliculasPorGenero);
+                count++
+                console.log(count);
+                    if(count>=generos.length) {
+                 console.log("resolve");
+                 resolve(peliculas);
+                    }
+        })
+    
 
-        // Exponer los datos a una API con Express
-    });
+    })
+    
+
+
+
+
+    
 }
 
-main();
+module.exports= {
+    service
 
+}
