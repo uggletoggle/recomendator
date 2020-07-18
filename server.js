@@ -3,19 +3,28 @@ const bodyParser = require("body-parser");
 const filmaffinityService = require ('./filmaffinityService')
 const service = filmaffinityService.service
 
-service()
-.then(res => console.log(res));
-// const app = express();
+const app = express();
 
-// const PORT = 3000;
+const PORT = 3000;
 
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 
-// app.get("/", function (req, res) {
-//   res.send("Hola Mundo");
-// });
+app.get("/", function (req, res) {
+    
+    service()
+         .then(peliculas => {
 
-// app.listen(PORT, function () {
-//   console.log("Server escuchando en puerto 3000");
-// });
+            let listaPeliculas = peliculas 
+
+            // res.json(listaPeliculas[Math.floor(Math.random()*100)])
+            res.json(listaPeliculas)
+
+          } );
+
+  
+});
+
+app.listen(PORT, function () {
+  console.log("Server escuchando en puerto 3000");
+});
 

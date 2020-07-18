@@ -66,6 +66,7 @@ console.log("antes del foreach");
                     if(count>=generos.length) {
                  console.log("resolve");
                  resolve(peliculas);
+                 console.log(peliculas);
                     }
         })
     
