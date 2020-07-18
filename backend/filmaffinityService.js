@@ -54,32 +54,23 @@ let service = async function() {
     let count = 0;
 
     return new Promise(resolve => {
-         console.log("entrando");
-       
-            
-console.log("antes del foreach");
-            generos.forEach(async(genero) => {
-                const peliculasPorGenero = await traerPeliculas((genero = genero));
-                peliculas.push.apply(peliculas, peliculasPorGenero);
-                count++
-                console.log(count);
-                    if(count>=generos.length) {
-                 console.log("resolve");
-                 resolve(peliculas);
-                    }
-        })
-    
+        console.log("entrando");
 
+        console.log("antes del foreach");
+        generos.forEach(async(genero) => {
+            const peliculasPorGenero = await traerPeliculas((genero = genero));
+            peliculas.push.apply(peliculas, peliculasPorGenero);
+            count++;
+            console.log(count);
+            if (count >= generos.length) {
+                console.log("resolve");
+                resolve(peliculas);
+            }
+        });
     })
-    
 
-
-
-
-    
 }
 
-module.exports= {
+module.exports = {
     service
-
 }
