@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: #1f1f1f;
+    width: 100%;
+}
+
+.imagen-con-borde {
+    border-top: solid 10px #4248bd;
+    border-radius: 5px;
+}
+
+.imagen-con-borde-2 {
+    border-top: solid 10px rgba(155, 230, 57, 0.867);
+    border-radius: 5px;
+}
+
+.imagen-con-borde-3 {
+    border-top: solid 10px rgba(223, 33, 33, 0.867);
+    border-radius: 5px;
+}
+
+.con-sombra {
+    -webkit-box-shadow: 7px -8px 5px -3px rgba(0, 0, 0, 0.52);
+    -moz-box-shadow: 7px -8px 5px -3px rgba(0, 0, 0, 0.52);
+    box-shadow: 6px -8px 5px -3px rgba(0, 0, 0, 0.52);
+}
